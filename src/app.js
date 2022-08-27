@@ -21,6 +21,17 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+function searchCity(city) {
+  let apiKey = "49ac1fe3e936f92ae95c857e57314731";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function searchFunction(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input").value;
+  searchCity(city);
+}
 
 function displayTemperature(response) {
   console.log(response.data);
@@ -44,7 +55,6 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "49ac1fe3e936f92ae95c857e57314731";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayTemperature);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", searchFunction);
+searchCity("Oslo");
