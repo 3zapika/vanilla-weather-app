@@ -28,7 +28,7 @@ h1 {
   font-size: 70px;
   font-weight: bold;
   color: #006ec5;
-  margin-bottom: 20px;
+  padding: 12px;
 }
 li {
   list-style: none;
@@ -73,7 +73,7 @@ ul {
   margin-top: 5px;
 }
 .current-date {
-  font-size: 18px;
+  font-size: 20px;
 }
 .li-descrip {
   font-size: 25px;
