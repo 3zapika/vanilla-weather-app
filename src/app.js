@@ -18,7 +18,7 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[dayIndex];
-  return `${day} ${hours}:${minutes}`;
+  return `${day}, ${hours}:${minutes}`;
 }
 function displayTemperature(response) {
   console.log(response.data);
@@ -60,6 +60,11 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+
+function showFahrenheit(event) {
+  event.preventDefault();
+}
+
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
@@ -93,3 +98,6 @@ let currentFullDate = `${currentDate}.${currentMonth}.${currentYear}`;
 document.querySelector("#current-date").innerHTML = currentFullDate;
 
 searchCity("Athens");
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
