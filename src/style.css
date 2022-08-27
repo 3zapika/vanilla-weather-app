@@ -39,6 +39,7 @@ li:first-letter {
 ul {
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 .weather-app {
   background-color: aliceblue;
@@ -65,9 +66,13 @@ ul {
   font-weight: 600;
   font-size: 20px;
 }
+
 .date-time {
   font-size: 35px;
   margin-top: 5px;
+}
+.current-date {
+  font-size: 18px;
 }
 .li-descrip {
   font-size: 25px;
