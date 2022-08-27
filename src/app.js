@@ -69,4 +69,27 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchFunction);
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let now = new Date();
+let currentYear = now.getFullYear();
+let currentDay = days[now.getDay()];
+let currentMonth = now.getMonth() + 1;
+if (currentMonth < 10) {
+  currentMonth = `0${currentMonth}`;
+}
+let currentDate = now.getDate();
+let currentFullDate = `${currentDate}.${currentMonth}.${currentYear}`;
+
+document.querySelector("#current-date").innerHTML = currentFullDate;
+
 searchCity("Athens");
