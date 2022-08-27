@@ -17,6 +17,37 @@
   <body>
     <div class="container">
       <div class="weather-app">
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-7">
+              <input type="search" placeholder="Search a city.." class="form-control" id="city-input" autocomplete="off"/>
+            </div>
+            <div class="col-4">
+              <button type="submit" class="form-button btn">
+                Search
+                <img
+                  src="images/image (2).png"
+                  alt="Search"
+                  class="form-icon"
+                />
+              </button>
+            </div>
+            <div class="col-4">
+              <button
+                type="submit" 
+                class="form-button btn"
+                id="current-location-button"
+              >
+                My location
+                <img
+                  src="images/image (9).png"
+                  alt="Location"
+                  class="form-icon"
+                />
+              </button>
+            </div>
+          </div>
+         </form>
         <h1 id="city"></h1>
         <div class="row">
           <div class="col-6">
