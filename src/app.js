@@ -28,7 +28,10 @@ function displayTemperature(response) {
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
@@ -63,6 +66,18 @@ function getCurrentLocation(event) {
 
 function showFahrenheit(event) {
   event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function showCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let dateElement = document.querySelector("#date");
@@ -94,10 +109,13 @@ if (currentMonth < 10) {
 }
 let currentDate = now.getDate();
 let currentFullDate = `${currentDate}.${currentMonth}.${currentYear}`;
-
 document.querySelector("#current-date").innerHTML = currentFullDate;
 
-searchCity("Athens");
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
+
+searchCity("Athens");
