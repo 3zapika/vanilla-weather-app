@@ -87,5 +87,6 @@ ul {
   font-size: 25px;
 }
 .footer {
+  display: block;
   text-align: center;
 }
