@@ -32,7 +32,7 @@ h1 {
 }
 li {
   list-style: none;
-  color: #48484a;
+  color: #48484ad6;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -66,6 +66,14 @@ ul {
   color: #ffa726;
   font-weight: 600;
   font-size: 20px;
+}
+.weather-temperature .active {
+  color: #ff7043;
+  cursor: default;
+}
+.units-link {
+  color: #ffa726;
+  text-decoration: none;
 }
 
 .date-time {
