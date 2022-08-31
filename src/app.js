@@ -118,4 +118,4 @@ fahrenheitLink.addEventListener("click", showFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsius);
 
-searchCity("Athens");
+searchCity("Poltava");
