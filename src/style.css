@@ -44,6 +44,7 @@ ul {
   line-height: 1.5;
 }
 .weather-app {
+  background-image: url("https://github.com/3zapika/vanilla-weather-app/blob/main/images/pexels-pixabay-314726.jpg");
   background-color: aliceblue;
   max-width: 700px;
   border: 1px solid #dfdfdf;
