@@ -44,11 +44,7 @@ ul {
   line-height: 1.5;
 }
 .weather-app {
-  background-color: radial-gradient(
-    circle at 10% 20%,
-    rgb(69, 123, 143) 0%,
-    rgb(189, 196, 203) 90.1%
-  );
+  background-color: gray;
   max-width: 700px;
   border: 1px solid #dfdfdf;
   border-radius: 8px;
