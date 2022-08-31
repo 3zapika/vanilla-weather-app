@@ -32,7 +32,7 @@ function displayTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  cityElement.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
+  cityElement.innerHTML = `${response.data.name} (${response.data.sys.country})`;
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed);
