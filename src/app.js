@@ -131,14 +131,14 @@ let days = [
 let now = new Date();
 let currentYear = now.getFullYear();
 let currentDay = days[now.getDay()];
-if (currentDay < 10) {
-  currentDay = `0${currentDay}`;
-}
 let currentMonth = now.getMonth() + 1;
 if (currentMonth < 10) {
   currentMonth = `0${currentMonth}`;
 }
 let currentDate = now.getDate();
+if (currentDate < 10) {
+  currentDate = `0${currentDate}`;
+}
 let currentFullDate = `${currentDate}.${currentMonth}.${currentYear}`;
 document.querySelector("#current-date").innerHTML = currentFullDate;
 
