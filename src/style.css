@@ -10,6 +10,9 @@ body {
   background-color: #f2f2f1;
   color: #48484ad6;
 }
+.form-button:hover {
+  border: #d2d8de 1px solid;
+}
 
 .row {
   margin: 0 auto;
@@ -91,6 +94,7 @@ ul {
   margin-top: 20px;
   text-align: center;
 }
+
 .forecast-date {
   font-size: 18px;
 }
