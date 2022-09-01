@@ -42,6 +42,34 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+    <div class="col-2">
+      <div class="forecast-date">${day}</div>
+      <img
+        src="http://openweathermap.org/img/wn/04n@2x.png"
+        alt=""
+        width="75px"
+      />
+      <div class="forecast-temperature">
+        <span class="forecast-temperature-max">31°</span>
+        <span class="forecast-temperature-min">22°</span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function searchCity(city) {
   let apiKey = "49ac1fe3e936f92ae95c857e57314731";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -121,4 +149,5 @@ fahrenheitLink.addEventListener("click", showFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsius);
 
-searchCity("Poltava");
+searchCity("Athens");
+displayForecast();
