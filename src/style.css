@@ -1,16 +1,16 @@
 body {
   font-family: "Gentium Book Plus", serif;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(226, 240, 254) 0%,
-    rgb(255, 247, 228) 90%
-  );
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background-attachment: fixed;
+  color: #48484ad6;
 }
 .form-button {
   border-radius: 5px;
   border: #d2d8de 1px solid;
   background-color: #f2f2f1;
+  color: #48484ad6;
 }
+
 .row {
   margin: 0 auto;
 }
@@ -44,7 +44,7 @@ ul {
   line-height: 1.5;
 }
 .weather-app {
-  background-color: aliceblue;
+  background-color: rgba(240, 248, 255, 0.685);
   max-width: 700px;
   border: 1px solid #dfdfdf;
   border-radius: 8px;
@@ -86,6 +86,19 @@ ul {
 }
 .li-descrip {
   font-size: 25px;
+}
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.forecast-date {
+  font-size: 18px;
+}
+.forecast-temperature {
+  font-size: 15px;
+}
+.forecast-temperature-min {
+  opacity: 0.7;
 }
 .footer {
   display: block;
