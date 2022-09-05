@@ -11,7 +11,7 @@ body {
   color: #48484ad6;
 }
 .form-button:hover {
-  border: #d2d8de 1px solid;
+  border: #b3bac1 1px solid;
 }
 
 .row {
@@ -36,7 +36,6 @@ h1 {
 
 li {
   list-style: none;
-  color: #48484ad6;
 }
 li:first-letter {
   text-transform: capitalize;
@@ -49,7 +48,7 @@ ul {
 .weather-app {
   background-color: rgb(213 215 217 / 47%);
   max-width: 700px;
-  border: 1px solid #dfdfdf;
+  border: 1px solid rgb(213 215 217 / 47%) f;
   border-radius: 8px;
   padding: 20px 15px;
   margin: 35px auto;
@@ -61,23 +60,15 @@ ul {
 }
 .weather-temperature strong {
   line-height: 1;
-  color: #ff7043;
+  color: #ec6e4c;
   font-size: 90px;
 }
 .weather-temperature .units {
   position: relative;
   top: -50px;
-  color: #ffa726;
+  color: #ec6e4c;
   font-weight: 600;
   font-size: 20px;
-}
-.weather-temperature .active {
-  color: #ff7043;
-  cursor: default;
-}
-.units-link {
-  color: #ffa726;
-  text-decoration: none;
 }
 
 .date-time {
@@ -107,4 +98,8 @@ ul {
 .footer {
   display: block;
   text-align: center;
+}
+a {
+  color: #48484ad6;
+  text-decoration: none;
 }
